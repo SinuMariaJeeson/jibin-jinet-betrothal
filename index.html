@@ -786,48 +786,54 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- ============ SECTION 4: COUNTDOWN ============ -->
 <section class="countdown-section" id="countdown-section">
   <canvas id="dust-canvas"></canvas>
-  <div class="countdown-inner">
-    <div class="section-eyebrow">Counting Down To</div>
-    <h2>The Betrothal Ceremony</h2>
-    <div class="countdown-flip">
-      <div class="flip-unit">
-        <div class="flip-face" id="cd-days">00</div>
-        <div class="flip-label">Days</div>
+
+  <div class="countdown-calendar-wrapper">
+    
+    <!-- COUNTDOWN BLOCK -->
+    <div class="countdown-inner">
+      <div class="section-eyebrow">Counting Down To</div>
+      <h2>The Betrothal Ceremony</h2>
+      
+      <div class="countdown-flip">
+        <div class="flip-unit">
+          <div class="flip-face" id="cd-days">00</div>
+          <div class="flip-label">Days</div>
+        </div>
+        <div class="flip-unit">
+          <div class="flip-face" id="cd-hours">00</div>
+          <div class="flip-label">Hours</div>
+        </div>
+        <div class="flip-unit">
+          <div class="flip-face" id="cd-mins">00</div>
+          <div class="flip-label">Minutes</div>
+        </div>
+        <div class="flip-unit">
+          <div class="flip-face" id="cd-secs">00</div>
+          <div class="flip-label">Seconds</div>
+        </div>
       </div>
-      <div class="flip-unit">
-        <div class="flip-face" id="cd-hours">00</div>
-        <div class="flip-label">Hours</div>
-      </div>
-      <div class="flip-unit">
-        <div class="flip-face" id="cd-mins">00</div>
-        <div class="flip-label">Minutes</div>
-      </div>
-      <div class="flip-unit">
-        <div class="flip-face" id="cd-secs">00</div>
-        <div class="flip-label">Seconds</div>
+      
+    </div>
+    <br><br><br>
+    <!-- CALENDAR BLOCK -->
+    <div class="calendar-card" id="calendar">
+      <div class="section-eyebrow">Mark The Date</div>
+      <h2>July, 2026</h2>
+      <div class="calendar-grid">
+        <div class="calendar-dow">S</div><div class="calendar-dow">M</div><div class="calendar-dow">T</div><div class="calendar-dow">W</div><div class="calendar-dow">T</div><div class="calendar-dow">F</div><div class="calendar-dow">S</div>
+        <div class="calendar-day is-empty"></div><div class="calendar-day is-empty"></div><div class="calendar-day is-empty"></div>
+        <div class="calendar-day">1</div><div class="calendar-day">2</div><div class="calendar-day">3</div><div class="calendar-day">4</div>
+        <div class="calendar-day">5</div><div class="calendar-day">6</div><div class="calendar-day">7</div><div class="calendar-day">8</div><div class="calendar-day">9</div><div class="calendar-day">10</div><div class="calendar-day">11</div>
+        <div class="calendar-day">12</div><div class="calendar-day">13</div><div class="calendar-day">14</div><div class="calendar-day">15</div><div class="calendar-day">16</div><div class="calendar-day">17</div><div class="calendar-day">18</div>
+        <div class="calendar-day">19</div><div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div><div class="calendar-day">23</div><div class="calendar-day">24</div><div class="calendar-day is-love">25</div>
+        <div class="calendar-day">26</div><div class="calendar-day">27</div><div class="calendar-day">28</div><div class="calendar-day">29</div><div class="calendar-day">30</div><div class="calendar-day">31</div><div class="calendar-day is-empty"></div>
       </div>
     </div>
-    <p class="countdown-sub">25 July 2026 · 11:30 AM · St. Thomas Church, Aranattukara</p>
+
   </div>
 </section>
 
-<!-- ============ SECTION 4B: JULY CALENDAR ============ -->
-<section class="calendar-section" id="calendar">
-  <div class="calendar-card">
-    <div class="section-eyebrow">Mark The Date</div>
-    <h2>July, 2026</h2>
-    <div class="calendar-grid">
-      <div class="calendar-dow">S</div><div class="calendar-dow">M</div><div class="calendar-dow">T</div><div class="calendar-dow">W</div><div class="calendar-dow">T</div><div class="calendar-dow">F</div><div class="calendar-dow">S</div>
-      <div class="calendar-day is-empty"></div><div class="calendar-day is-empty"></div><div class="calendar-day is-empty"></div>
-      <div class="calendar-day">1</div><div class="calendar-day">2</div><div class="calendar-day">3</div><div class="calendar-day">4</div>
-      <div class="calendar-day">5</div><div class="calendar-day">6</div><div class="calendar-day">7</div><div class="calendar-day">8</div><div class="calendar-day">9</div><div class="calendar-day">10</div><div class="calendar-day">11</div>
-      <div class="calendar-day">12</div><div class="calendar-day">13</div><div class="calendar-day">14</div><div class="calendar-day">15</div><div class="calendar-day">16</div><div class="calendar-day">17</div><div class="calendar-day">18</div>
-      <div class="calendar-day">19</div><div class="calendar-day">20</div><div class="calendar-day">21</div><div class="calendar-day">22</div><div class="calendar-day">23</div><div class="calendar-day">24</div><div class="calendar-day is-love">25</div>
-      <div class="calendar-day">26</div><div class="calendar-day">27</div><div class="calendar-day">28</div><div class="calendar-day">29</div><div class="calendar-day">30</div><div class="calendar-day">31</div><div class="calendar-day is-empty"></div>
-    </div>
-    <p class="calendar-note">Saturday, the 25th &mdash; forever circled in gold.</p>
-  </div>
-</section>
+
 
 <!-- ============ SECTION 5: VENUE ============ -->
 <section class="venue-section" id="venue">
@@ -838,7 +844,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="section-eyebrow">Betrothal Ceremony</div>
       <h2>St. Thomas Church</h2>
       <p class="venue-address">Aranattukara, Thrissur, Kerala</p>
-      <p class="venue-time">Saturday · 25 July 2026 · 11:30 AM</p>
+      <p class="venue-time"> 11:30 AM</p>
       <div class="venue-pin">
         <svg viewBox="0 0 48 48" fill="none" stroke="var(--gold)" stroke-width="1.3">
           <path d="M24 4c-8.3 0-15 6.7-15 15 0 11 15 25 15 25s15-14 15-25c0-8.3-6.7-15-15-15z"/>
@@ -856,7 +862,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="section-eyebrow">Reception</div>
       <h2>Cosmos Square Auditorium</h2>
       <p class="venue-address">St. Aloysius College Road, Elthuruth, Thrissur</p>
-      <p class="venue-time">Saturday · 25 July 2026 · 12:30 PM – 2:30 PM</p>
+      <p class="venue-time"> 12:30 PM – 2:30 PM</p>
       <div class="venue-pin">
         <svg viewBox="0 0 48 48" fill="none" stroke="var(--gold)" stroke-width="1.3">
           <path d="M24 4c-8.3 0-15 6.7-15 15 0 11 15 25 15 25s15-14 15-25c0-8.3-6.7-15-15-15z"/>
